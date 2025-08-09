@@ -1,0 +1,27 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bcyi2av7ut6n4"]
+
+[ext_resource type="Texture2D" uid="uid://kmfjuvu8rsts" path="res://data/images/tileset0.png" id="1_fflfa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hi0yy"]
+texture = ExtResource("1_fflfa")
+0:0/next_alternative_id = 3
+0:0/0 = 0
+0:0/0/terrain_set = 0
+0:0/0/terrain = 0
+1:0/next_alternative_id = 2
+1:0/0 = 0
+1:0/0/terrain_set = 0
+1:0/0/terrain = 0
+1:0/0/probability = 0.3
+2:0/next_alternative_id = 2
+2:0/0 = 0
+2:0/0/terrain_set = 0
+2:0/0/terrain = 0
+2:0/0/probability = 0.3
+3:0/0 = 0
+
+[resource]
+terrain_set_0/mode = 2
+terrain_set_0/terrain_0/name = "grass"
+terrain_set_0/terrain_0/color = Color(0.0392157, 0.760784, 0.286275, 1)
+sources/0 = SubResource("TileSetAtlasSource_hi0yy")
