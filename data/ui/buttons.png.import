@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kmfjuvu8rsts"
-path="res://.godot/imported/tileset0.png-1770cfa96e5cd6eddececa453e970ccc.ctex"
+uid="uid://cqj1ovbkgru51"
+path="res://.godot/imported/buttons.png-e3a6c642d55efb42b052cb7eb4ac4112.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://data/images/tileset0.png"
-dest_files=["res://.godot/imported/tileset0.png-1770cfa96e5cd6eddececa453e970ccc.ctex"]
+source_file="res://data/ui/buttons.png"
+dest_files=["res://.godot/imported/buttons.png-e3a6c642d55efb42b052cb7eb4ac4112.ctex"]
 
 [params]
 
@@ -21,7 +21,7 @@ compress/lossy_quality=0.7
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
-mipmaps/generate=true
+mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""

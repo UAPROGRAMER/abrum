@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://bttuda561ypyr"]
+
+[ext_resource type="Script" uid="uid://cj5tlw0h2ks7" path="res://scenes/entities/player.gd" id="1_08t41"]
+[ext_resource type="Texture2D" uid="uid://d4a8w8cl4v6v8" path="res://data/entities/elf.png" id="2_08t41"]
+[ext_resource type="Script" uid="uid://ele42re6cop6" path="res://scenes/components/movement_component.gd" id="3_1ie0h"]
+
+[node name="player" type="Node2D"]
+script = ExtResource("1_08t41")
+metadata/_custom_type_script = "uid://bbgbmo8s3mfgv"
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_08t41")
+centered = false
+
+[node name="movement_component" type="Node" parent="."]
+script = ExtResource("3_1ie0h")
+metadata/_custom_type_script = "uid://ele42re6cop6"

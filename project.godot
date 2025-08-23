@@ -13,12 +13,16 @@ config_version=5
 config/name="Abrum"
 run/main_scene="uid://uf4dwkjrdqcs"
 config/features=PackedStringArray("4.4", "Mobile")
-config/icon="res://icon.svg"
+config/icon="res://data/other/icon.svg"
+
+[autoload]
+
+Global="*res://scenes/other/global.gd"
 
 [display]
 
-window/size/viewport_width=1280
-window/size/viewport_height=720
+window/size/viewport_width=736
+window/size/viewport_height=736
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/handheld/orientation=6
@@ -27,6 +31,7 @@ window/handheld/orientation=6
 
 folder_colors={
 "res://data/": "red",
+"res://resources/": "yellow",
 "res://scenes/": "blue"
 }
 

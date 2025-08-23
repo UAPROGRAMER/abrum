@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://ddq6ph76k280f"]
+
+[ext_resource type="Script" uid="uid://dko4bcpdytb6a" path="res://scenes/entities/ork.gd" id="1_lpovb"]
+[ext_resource type="Texture2D" uid="uid://bwgm86ytfy2qf" path="res://data/entities/red_ork.png" id="2_5lp4b"]
+[ext_resource type="Script" uid="uid://ele42re6cop6" path="res://scenes/components/movement_component.gd" id="3_f06uv"]
+
+[node name="ork" type="Node2D"]
+script = ExtResource("1_lpovb")
+metadata/_custom_type_script = "uid://bbgbmo8s3mfgv"
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_5lp4b")
+centered = false
+
+[node name="movement_component" type="Node" parent="."]
+script = ExtResource("3_f06uv")
+metadata/_custom_type_script = "uid://ele42re6cop6"

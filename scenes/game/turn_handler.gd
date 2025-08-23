@@ -2,10 +2,11 @@ extends Node
 
 class_name TurnHandler
 
-signal turn(turn_number: int)
+@onready var game: Game = $".."
 
-var turn_number: int = 0
+var turn: int = 0
 
 func next_turn() -> void:
-	turn_number += 1
-	turn.emit(turn_number)
+	turn += 1
+	for entity: Entity in game.entities.get_children():
+		entity.take_turn(turn)
