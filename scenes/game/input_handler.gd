@@ -4,6 +4,8 @@ class_name InputHandler
 
 @onready var game: Game = $".."
 
+@onready var player_handler: PlayerHandler = $"../player_handler"
+
 var is_press: bool = false
 
 func _unhandled_input(event: InputEvent) -> void:
@@ -36,6 +38,4 @@ func drag_event(relative: Vector2) -> void:
 	game.camera.position -= relative / game.camera.zoom
 
 func press_event() -> void:
-	game.player_handler.move_to(
-		game.tilemap.local_to_map(game.tilemap.get_local_mouse_position())
-	)
+	player_handler.move_to(Global.pos_to_coords(game.world.get_local_mouse_position()))

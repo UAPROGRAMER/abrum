@@ -4,7 +4,7 @@ class_name Camera
 
 @export var real_factor: float = 0.0
 
-@onready var game: Game = $".."
+@onready var game: Game = $"../.."
 
 func _ready() -> void:
 	change_zoom(1.0)

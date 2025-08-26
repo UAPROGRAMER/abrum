@@ -6,16 +6,15 @@ class_name MovementComponent
 
 @onready var root_entity: Entity = $".."
 
-func _ready() -> void:
+func setup() -> void:
 	if intangible:
 		return
-	await root_entity.entity_ready
-	root_entity.game.pathfinder.set_point_solid(root_entity.coords, true)
+	root_entity.game.path_handler.pathfinder.set_point_solid(root_entity.coords, true)
 
 func move_to(coords: Vector2i) -> void:
 	if not intangible:
-		if root_entity.game.pathfinder.is_point_solid(coords):
+		if not root_entity.game.map_handler.is_passible(coords):
 			return
-		root_entity.game.pathfinder.set_point_solid(coords, true)
-		root_entity.game.pathfinder.set_point_solid(root_entity.coords, false)
+		root_entity.game.path_handler.pathfinder.set_point_solid(coords, true)
+		root_entity.game.path_handler.pathfinder.set_point_solid(root_entity.coords, false)
 	root_entity.coords = coords
