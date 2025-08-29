@@ -7,12 +7,16 @@ func change_ui_scale(scale: int) -> void:
 	$bottom_container.position.y -= 64 * (scale / 2)
 	$bottom_container/wait_button.custom_minimum_size = Vector2i(64 * scale, 64 * scale)
 	$bottom_container/game_speed_button.custom_minimum_size = Vector2i(64 * scale, 64 * scale)
+	$bottom_container/investigate_button.custom_minimum_size = Vector2i(64 * scale, 64 * scale)
 	$menu_button.size = Vector2i(64 * scale, 64 * scale)
 	$menu_button.position -= Vector2(64 * (scale / 2), 0)
 	$menu.scale = Vector2i(scale * 2, scale * 2)
 
 func _on_wait_button_pressed() -> void:
 	game.player_handler.wait()
+
+func _on_investigate_button_pressed() -> void:
+	game.player_handler.investigate()
 
 func _on_game_speed_button_pressed() -> void:
 	const textures: Dictionary[int, AtlasTexture] = {

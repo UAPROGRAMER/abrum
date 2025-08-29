@@ -13,7 +13,7 @@ func setup() -> void:
 
 func move_to(coords: Vector2i) -> void:
 	if not intangible:
-		if not root_entity.game.map_handler.is_passible(coords):
+		if root_entity.game.path_handler.pathfinder.is_point_solid(coords):
 			return
 		root_entity.game.path_handler.pathfinder.set_point_solid(coords, true)
 		root_entity.game.path_handler.pathfinder.set_point_solid(root_entity.coords, false)

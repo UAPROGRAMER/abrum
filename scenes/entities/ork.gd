@@ -20,4 +20,3 @@ func take_turn(turn: int) -> void:
 		movement_component.move_to(coords + direction)
 		counter += 1
 		direction = directions[counter % 4]
-		Global.move = true

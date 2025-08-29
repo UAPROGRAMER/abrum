@@ -14,11 +14,18 @@ const INT32_MIN: int = -INT32_MAX - 1
 
 var pathfinder: AStarGrid2D
 
-func setup() -> void:
+func _ready() -> void:
 	pathfinder = AStarGrid2D.new()
 	
-	pathfinder.cell_size = Global.TILE_SIZE
+	pathfinder.default_compute_heuristic = AStarGrid2D.HEURISTIC_OCTILE
+	pathfinder.default_estimate_heuristic = AStarGrid2D.HEURISTIC_OCTILE
 	
+	pathfinder.cell_size = Global.TILE_SIZE
+
+func setup() -> void:
+	update()
+
+func update() -> void:
 	var min_x: int = INT32_MAX
 	var max_x: int = INT32_MIN
 	var min_y: int = INT32_MAX
@@ -51,4 +58,4 @@ func setup() -> void:
 		update_tile(tile)
 
 func update_tile(coords: Vector2i) -> void:
-	pathfinder.set_point_solid(coords, not map_handler.is_pathfindable(coords))
+	pathfinder.set_point_solid(coords, not map_handler.is_passible(coords))

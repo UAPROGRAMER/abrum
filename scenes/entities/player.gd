@@ -42,9 +42,7 @@ func take_turn(turn: int) -> void:
 		movement_component.move_to((action as ActionMoveTo).coords)
 		fov_component.update_fov()
 		action = null
-		Global.change = true
 	elif action is ActionInteract:
 		game.map_handler.interact((action as ActionInteract).coords)
 		fov_component.update_fov()
 		action = null
-		Global.change = true

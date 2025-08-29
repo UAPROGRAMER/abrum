@@ -38,4 +38,4 @@ func drag_event(relative: Vector2) -> void:
 	game.camera.position -= relative / game.camera.zoom
 
 func press_event() -> void:
-	player_handler.move_to(Global.pos_to_coords(game.world.get_local_mouse_position()))
+	player_handler.goal(Global.pos_to_coords(game.world.get_local_mouse_position()))

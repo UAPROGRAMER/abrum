@@ -13,6 +13,8 @@ class_name Game
 
 @onready var entities: Node2D = $world/entities
 
+@onready var effects: Effects = $world/effects
+
 @onready var camera: Camera = $world/camera
 
 func _ready() -> void:
@@ -22,4 +24,5 @@ func _ready() -> void:
 	path_handler.setup()
 	for entity: Entity in entities.get_children():
 		entity.setup()
+	camera.position = player_handler.player.position
 	$background_layer.layer = -1
